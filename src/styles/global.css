@@ -6,7 +6,7 @@
     /* ========Brand========= */
 
     --color-brand: var(--semantic-brand);
-    --color-brand-hover: var(--semantic-brand);
+    --color-brand-hover: var(--semantic-brand-hover);
     --color-brand-soft: var(--semantic-brand-soft);
     --color-brand-soft-hover: var(--semantic-brand-soft-hover);
 

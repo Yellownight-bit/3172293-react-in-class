@@ -2,43 +2,43 @@
 
 :root {
     /* Primary color */
-    --primary-950: #4DB100;
-    --primary-900: #55B40C;
-    --primary-800: #67BC26;
-    --primary-700: #79C43F;
-    --primary-600: #8BCC59;
-    --primary-500: #9DD472;
-    --primary-400: #AEDB8C;
-    --primary-300: #C0E3A5;
-    --primary-200: #D2EBBF;
-    --primary-100: #EAF3D8;
-    --primary-50: #F6FBF2;
+    --color-primary-950: #4DB100;
+    --color-primary-900: #55B40C;
+    --color-primary-800: #67BC26;
+    --color-primary-700: #79C43F;
+    --color-primary-600: #8BCC59;
+    --color-primary-500: #9DD472;
+    --color-primary-400: #AEDB8C;
+    --color-primary-300: #C0E3A5;
+    --color-primary-200: #D2EBBF;
+    --color-primary-100: #EAF3D8;
+    --color-primary-50: #F6FBF2;
 
     /* Secondary color */
-    --secondary-950: #FED638;
-    --secondary-900: #FED841;
-    --secondary-800: #FEDC55;
-    --secondary-700: #FEE069;
-    --secondary-600: #FEE47D;
-    --secondary-500: #FEE891;
-    --secondary-400: #FEECA5;
-    --secondary-300: #FEF0B9;
-    --secondary-200: #FEF4CD;
-    --secondary-100: #FEF8E1;
-    --secondary-50:  #FEFCF5;
+    --color-secondary-950: #FED638;
+    --color-secondary-900: #FED841;
+    --color-secondary-800: #FEDC55;
+    --color-secondary-700: #FEE069;
+    --color-secondary-600: #FEE47D;
+    --color-secondary-500: #FEE891;
+    --color-secondary-400: #FEECA5;
+    --color-secondary-300: #FEF0B9;
+    --color-secondary-200: #FEF4CD;
+    --color-secondary-100: #FEF8E1;
+    --color-secondary-50:  #FEFCF5;
 
   /* Tertiary-2 color */
-    --tertiary-950: #50E5F9;
-    --tertiary-900: #58E6F9;
-    --tertiary-800: #6AE8F9;
-    --tertiary-700: #7BEBFA;
-    --tertiary-600: #8DEEFB;
-    --tertiary-500: #9EF0FB;
-    --tertiary-400: #B0F3FC;
-    --tertiary-300: #C1F5FC;
-    --tertiary-200: #D3F8FD;
-    --tertiary-100: #E4FBFE;
-    --tertiary-50:  #F6FDFE;
+    --color-tertiary-950: #50E5F9;
+    --color-tertiary-900: #58E6F9;
+    --color-tertiary-800: #6AE8F9;
+    --color-tertiary-700: #7BEBFA;
+    --color-tertiary-600: #8DEEFB;
+    --color-tertiary-500: #9EF0FB;
+    --color-tertiary-400: #B0F3FC;
+    --color-tertiary-300: #C1F5FC;
+    --color-tertiary-200: #D3F8FD;
+    --color-tertiary-100: #E4FBFE;
+    --color-tertiary-50:  #F6FDFE;
 
     /* Basic color */
     --white: #fff;
