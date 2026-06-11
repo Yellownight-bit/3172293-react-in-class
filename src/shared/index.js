@@ -8,3 +8,6 @@ export {default as Button} from "./components/Button";
 export {default as DeteleCounter2} from "./components/DeleteCounter2";
 
 export {default as EffectDemo} from "./components/EffectDemo";
+export {default as CounterEffect} from "./components/CounterEffect";
+export {default as Select } from "./components/Select"
+export {default as Checkbox } from "./components/Checkbox"

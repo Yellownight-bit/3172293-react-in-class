@@ -1,11 +1,21 @@
+import { useState, useEffect } from "react";
 import { Outlet } from "react-router-dom";
 import authBg from "@/assets/images/bg-1.png";
-import { Input } from "@/shared";
-import { Button } from "@/shared";
-import DeleteCounter2 from "../components/DeleteCounter2";
-import EffectDemo from "../components/EffectDemo";
+import { Input, 
+         Button, 
+         Select, 
+         Checkbox } from "@/shared";
+import { getDocumentTypes } from "../../services/selectService";
 
 export default function AuthLayout() {
+
+  //Estado para los tipos de documentis
+  const [documentTypes, setDocumentTypes] = useState ([])
+
+  useEffect(() => {
+    getDocumentTypes().then(setDocumentTypes);
+  },[])
+
   return (
     <>
       <div
@@ -49,6 +59,14 @@ export default function AuthLayout() {
             placeholder="Escribe tu número de documento"
             htmlFor= "user-document-number"
             />
+           <Select
+              label= "Tipos de documento"
+              name="userDocumentTypes"
+              htmlFor="userDocumentTypes"
+              options={documentTypes}
+            />
+            
+          <Checkbox/>
 
 
             {/*Actions*/}
@@ -75,15 +93,6 @@ export default function AuthLayout() {
 
             {/*Implementacion del estado useState*/}
 
-          <div className="mt-10">
-            <h1>Ejemplo sin useState</h1>
-            <DeleteCounter2/>
-
-          </div>
-
-            <h1>Hola que tal</h1>
-
-            <EffectDemo/>
           <Outlet />
         </main>
       </div>
