@@ -9,6 +9,16 @@ export {default as DeteleCounter2} from "./components/DeleteCounter2";
 
 export {default as EffectDemo} from "./components/EffectDemo";
 export {default as CounterEffect} from "./components/CounterEffect";
-export {default as Select } from "./components/Select"
-export {default as Checkbox } from "./components/Checkbox"
-export { default as IconButton } from "./components/IconButton"
+export {default as Select } from "./components/Select";
+export {default as Checkbox } from "./components/Checkbox";
+export { IconButton } from "./components/IconButton";
+export { default as SearchField } from "./components/SearchField";
+
+// Layout components
+export {default as Navbar } from "./layouts/Navbar";
+export {
+    Dropdown,
+    DropdownTrigger,
+    DropdownItem,
+    DropdownContent, 
+} from "./components/Dropdown";
