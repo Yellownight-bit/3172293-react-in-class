@@ -6,8 +6,11 @@ import { getDocumentTypes } from "@/services/selectService";
 // import { useNavigate } from "react-router-dom";
 import { userSchema } from "../schemas/userSchema";
 import { User, Pencil } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 
 export default function UserRegisterForm (){
+
+    const navigate = useNavigate();
 
     // const navigate = useNavigate();
 
@@ -249,7 +252,8 @@ export default function UserRegisterForm (){
                     variant= "secondary"
                     size= "sm"
                     type= "button"
-                    onClick={() => console.log("Se oprimio el cancelar")}
+                    onClick={() => navigate(-1)}
+                    
                 
                 >Cancelar
                 </Button>

@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Icon, Menu } from "lucide-react";
+import { Menu } from "lucide-react";
 import {
   IconButton,
   Dropdown,
@@ -34,7 +34,7 @@ return (
             <div className="flex h-16 items-center justify-between">
             {/* Logo de marca */}
             <div className=" hidden sm:block items-center">
-                <Link to={"/dashboard/home"} className="text-h1 font-heading">
+                <Link to={"/dashboard/"} className="text-h1 font-heading">
                 <img src={logo} alt="logo" className="h-12" />
                 </Link>
             </div>
@@ -96,7 +96,10 @@ return (
                                 Gestión de productos
                             </DropdownItem>
                              <DropdownItem>
-                                Gestión de usuarios
+                                <Link to="/dashboard/userCreate" className="block w-full">Crear usuario</Link>
+                            </DropdownItem>
+                            <DropdownItem>
+                                <Link to="/dashboard/userList" className="block w-full">Listar usuarios</Link>
                             </DropdownItem>
                              <DropdownItem>
                                 Cerrar sesión

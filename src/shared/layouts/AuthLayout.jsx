@@ -68,8 +68,6 @@ export default function AuthLayout() {
             
           <Checkbox/>
 
-
-            {/*Actions*/}
             <div className="flex gap-6 items-center" >
 
                <Button
@@ -89,9 +87,9 @@ export default function AuthLayout() {
               
               >Guardar
               </Button>
-            </div>{/* actions */}
+            </div>
 
-            {/*Implementacion del estado useState*/}
+            Implementacion del estado useState
 
           <Outlet />
         </main>
