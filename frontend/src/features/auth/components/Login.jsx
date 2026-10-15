@@ -88,7 +88,7 @@ export default function UserRegisterForm() {
         {/* Inputs */}
         <div className="grid grid-cols-1 gap-6 my-auto mx-auto border p-[48px] rounded-[6px] ">
           <Input
-            label="Correo"
+            label="Email"
             name="userEmail"
             type="email"
             placeholder="Ingrese su correo"
