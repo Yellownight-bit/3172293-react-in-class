@@ -1,6 +1,5 @@
-// selectService.js
+import documentTypes from "../data/selects/documentTypes.json";
 
 export async function getDocumentTypes() {
-    const res = await fetch("/src/data/selects/documentTypes.json")
-    return res.json();
+    return documentTypes;
 }
