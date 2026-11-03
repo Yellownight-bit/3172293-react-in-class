@@ -34,4 +34,9 @@ export const userService = {
         // sin agregar ninguna lógica adicional
         return await userRepository.create(userData);
     },    
+
+    async getAllUsers() {
+    const users = await userRepository.findAll();
+    return users;
+}
 };

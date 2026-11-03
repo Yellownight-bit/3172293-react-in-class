@@ -87,37 +87,10 @@ export default function PermissionModule({
                 )}
                 {/* Otros Módulos */}
                 <div>
-                    
+                    <h3 className="font-medium mb-4">Otros módulos</h3>
                 </div>
             </div>
-            <div className="space-y-8">
-                {Object.entries(permissionsByModule).map(
-                    ([moduleName, permissions]) => (
-                        <div key={moduleName} className="border-b-2 pb-6">
-                            <h3 className="font-medium mb-4">Módulo {moduleName}</h3>
-                            <div className="flex flex-wrap gap-6">
-                                {permissions.map((permission) => (
-                                    <Checkbox
-                                        key={permission.permission_id}
-                                        id={permission.permission_codename}
-                                        name={permission.permission_codename}
-                                        label={permission.permission_name}
-                                        checked={hasPermission(permission.permission_codename)}
-                                        disabled={!isEditing}
-                                        onChange={(e) =>
-                                            handlePermissionChange(permission, e.target.checked)
-                                        }
-                                    />
-                                ))}
-                            </div>
-                        </div>
-                    ),
-                )}
-                {/* Otros Módulos */}
-                <div>
-                  
-                </div>
-            </div>
+            
             {isEditing && (
                 <div className="flex justify-end gap-3 mt-8">
                     <Button type="button" variant="secondary" onClick={onCancel}>

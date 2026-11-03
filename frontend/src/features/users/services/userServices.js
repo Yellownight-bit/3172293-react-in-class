@@ -35,3 +35,28 @@ export async function createUser(userData) {
         // Si la petición fue exitosa, retornamos la respuesta parseada como json
         return response.json();
 }
+
+// Funcion para consultar todos los usuarios del backend
+export async function getAllUsers() {
+    // Obtenemos el JWT almacenado en sessionStorage
+    const token = sessionStorage.getItem("token");
+
+    // Realizamos la peticion HTTP
+    const response = await fetch(USERS_URL, {
+        // Metodo HTTP para consultar usuarios
+        method: "GET",
+        // Cabeceras de la peticion
+        headers: {
+            "Authorization": `Bearer ${token}`,
+        },
+    });
+
+    // Verificamos si la respuesta NO fue exitosa
+    if (!response.ok) {
+        const error = await response.json();
+        throw new Error(error.error || "Error al consultar los usuarios");
+    }
+
+    // Retornamos los usuarios en formato JSON
+    return response.json();
+}

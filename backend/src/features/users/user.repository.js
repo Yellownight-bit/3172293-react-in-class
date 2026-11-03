@@ -1,3 +1,4 @@
+
 // Importamos el pool de conexión a PostgreSQL.
 // Este pool es una instancia compartida configurada en la capa de infaestrcutura.
 import { pool } from "../../config/db.js"; // primero importamos al pool necesitamos el pool, los datos no estan quemados si no que los traemos del pool
@@ -66,5 +67,20 @@ export const userRepository = {
         // En este caso contiene el id del usuario recién creado
         return result.rows[0];
  
-    }, 
+    },
+
+    // Método encargado de consultar todos los usuarios
+    async findAll() {
+
+        const query = `
+            SELECT *
+            FROM users
+            ORDER BY id ASC;
+        `;
+
+        const result = await pool.query(query);
+
+        return result.rows;
+    },
+
 };
