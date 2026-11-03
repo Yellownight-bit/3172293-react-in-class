@@ -17,7 +17,9 @@ export { default as StatusSwitch } from "./components/StatusSwitch";
 export { default as DataTable } from "./components/DataTable";
 export { default as FileInput } from "./components/Filelnput";
 export { default as Card } from "./components/Card";
-export { fileSchema } from "./schemas/fileSchema"
+export { fileSchema } from "./schemas/fileSchema";
+export { default as ProtectedRoute } from "./components/auth/ProtectedRoute";
+export { default as AccessSidebar } from "./components/AccessSidebar";
 
 // Layout components
 export {default as Navbar } from "./layouts/Navbar";

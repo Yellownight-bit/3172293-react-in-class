@@ -1,21 +1,22 @@
 import { useState } from "react";
 import { loginSchema } from "../schemas/loginSchema";
 import { useNavigate } from "react-router-dom";
-// import { Link, Navigate, useNavigate } from "react-router-dom";
-// import { SquareArrowRightEnter, Menu } from "lucide-react";
 import { login } from "../services/authService";
+
 
 import { Input, Button } from "@/shared";
 
+
 export default function UserRegisterForm() {
   const navigate = useNavigate();
+
 
   const [formData, setFormData] = useState({
     userEmail: "",
     userPassword: "",
   });
-  
   const [errors, setErrors] = useState({});
+
 
   // ======================================
   //            Handle Genérico
@@ -27,14 +28,17 @@ export default function UserRegisterForm() {
     // Se obtiene el nombre del campo y su valor
     const { name, value, type, checked } = e.target;
 
+
     setFormData((prev) => ({
       // Se copian todos los valores anteriores del estado
       ...prev,
+
 
       // Se actualiza unicamente lo que cambió
       [name]: type === "checkbox" ? checked : value,
     }));
   };
+
 
   // ======================================
   //            Handle Submit
@@ -43,12 +47,16 @@ export default function UserRegisterForm() {
    * Función que se ejecuta cuando se envía el formulario
    */
 
+
   // submit real + guardar token
+
 
   const handleSubmit = async (e) => {
     e.preventDefault();
 
+
     const result = loginSchema.safeParse(formData);
+
 
     if (!result.success) {
       const fieldErrors = {};
@@ -59,14 +67,19 @@ export default function UserRegisterForm() {
       return;
     }
 
+
     setErrors({});
+
 
     try {
       const data = await login(result.data);
 
+
       console.log("LOGIN RESPONSE:", data);
 
+
       sessionStorage.setItem("token", data.token); // clave
+
 
       // navigate("/"); // o dashboard
       navigate("/dashboard/userList");
@@ -75,11 +88,13 @@ export default function UserRegisterForm() {
     }
   };
 
+
   return (
     <div className="flex flex-col justify-center h-screen">
       <h1 className="text-text-primary text-2xl mb-6 text-center pt-6">
         Inicio de sesión
       </h1>
+
 
       <form
         className="grid grid-cols-1 items-center gap-6"
@@ -88,7 +103,7 @@ export default function UserRegisterForm() {
         {/* Inputs */}
         <div className="grid grid-cols-1 gap-6 my-auto mx-auto border p-[48px] rounded-[6px] ">
           <Input
-            label="Email"
+            label="Correo"
             name="userEmail"
             type="email"
             placeholder="Ingrese su correo"
@@ -96,6 +111,7 @@ export default function UserRegisterForm() {
             onChange={handleChange}
             error={errors.userEmail}
           />
+
 
           <Input
             label="Contreseña"
@@ -107,11 +123,13 @@ export default function UserRegisterForm() {
             error={errors.userPassword}
           />
 
+
           {/* Actions */}
           <div className="flex items-end justify-end gap-12">
             <Button variant="secondary" size="sm">
               Cancelar
             </Button>
+
 
             <Button
               variant="primary"
